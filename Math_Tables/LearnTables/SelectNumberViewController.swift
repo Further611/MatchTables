@@ -33,7 +33,7 @@ class SelectNumberViewController: UIViewController, UICollectionViewDelegate, UI
         let cell = cvSelect.dequeueReusableCell(withReuseIdentifier: "cvcellId", for: indexPath) as! ResultCollectionViewCell
         cell.lbResult.text = String(items[indexPath.item])
         cell.lbResult.layer.cornerRadius = 5
-        cell.lbResult.backgroundColor = #colorLiteral(red: 0, green: 0.6039215686, blue: 0.3490196078, alpha: 1)
+        cell.lbResult.backgroundColor = UIColor.flatCoffee
         return cell
     }
     

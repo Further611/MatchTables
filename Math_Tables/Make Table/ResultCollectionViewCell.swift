@@ -16,7 +16,7 @@ class ResultCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        lbResult.backgroundColor = #colorLiteral(red: 0.569550693, green: 0.8009499907, blue: 0.3815413117, alpha: 1)
+        lbResult.backgroundColor = UIColor.flatYellowDark
     }
 
 }

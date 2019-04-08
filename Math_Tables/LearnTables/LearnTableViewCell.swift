@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import ChameleonFramework
 
 class LearnTableViewCell: UITableViewCell {
     @IBOutlet weak var lbMultiplication: UILabel!
@@ -38,8 +39,7 @@ class LearnTableViewCell: UITableViewCell {
         selectionStyle = .none
         // Initialization code
         
-        lbMultiplication.backgroundColor = #colorLiteral(red: 0.9960784314, green: 0.7490196078, blue: 0.1764705882, alpha: 1)
-        lbResult.backgroundColor = #colorLiteral(red: 0, green: 0.7605708838, blue: 0.6468440294, alpha: 1)
+        setupView()
     }
     
     override func layoutSubviews() {
@@ -99,10 +99,27 @@ class LearnTableViewCell: UITableViewCell {
         
     }
     
+    func setupView() {
+        lbMultiplication.backgroundColor = UIColor.flatSkyBlue
+        lbResult.backgroundColor = UIColor.flatMint
+        lbEqual.textColor = UIColor.flatYellowDark
+    }
+    
+    func setupViewLearn() {
+        lbMultiplication.backgroundColor = UIColor.flatLimeDark
+        lbResult.backgroundColor = UIColor.flatLimeDark
+        lbEqual.textColor = UIColor.flatLimeDark
+    }
+    
     func didGetDragged() {
         tempResult = lbResult.text
         lbResult.text = ""
         isAnswered = false
+    }
+    
+    func cancelSwap() {
+        lbResult.text = tempResult
+        isAnswered = true
     }
     
     func selection() {
@@ -127,6 +144,6 @@ class LearnTableViewCell: UITableViewCell {
     }
     
     func checkAnswer() {
-        lbResult.backgroundColor = isAnswered ? #colorLiteral(red: 0.9960784314, green: 0.7490196078, blue: 0.1764705882, alpha: 1) : #colorLiteral(red: 0, green: 0.7350509167, blue: 0.5725725293, alpha: 1)
+        lbResult.backgroundColor = isAnswered ? UIColor.flatSkyBlue : UIColor.flatMint
     }
 }

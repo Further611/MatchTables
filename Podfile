@@ -6,7 +6,10 @@ target 'Math_Tables' do
   use_frameworks!
 
   # Pods for Math_Tables
-
+use_frameworks!
 pod 'SCLAlertView'
-pod 'ChameleonFramework/Swift'
+#pod 'ChameleonFramework/Swift'
+pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
+
+
 end

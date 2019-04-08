@@ -59,7 +59,7 @@ class LearnViewController: UIViewController, UITableViewDataSource, UITableViewD
         cell.lbMultiplication.text = "\(number) x \(i)"
         cell.lbResult.text = "\(number * i)"
         lbNumber.text = String(number)
-        
+        cell.setupViewLearn()
         return cell
     }
     

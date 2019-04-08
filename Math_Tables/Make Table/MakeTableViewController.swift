@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 import SCLAlertView
+import ChameleonFramework
 
 class MakeTableViewController: UIViewController {
     
@@ -96,7 +97,7 @@ class MakeTableViewController: UIViewController {
             cell.isAnswered
             else { return }
         
-        let labelSnapShot = cell.lbResult.makeSnapshot(backgroundColor: #colorLiteral(red: 0.5058823529, green: 0.7725490196, blue: 0.3098039216, alpha: 1))
+        let labelSnapShot = cell.lbResult.makeSnapshot(backgroundColor: UIColor.flatYellowDark)
         self.snapShotViewTBV = labelSnapShot
         self.selectingIndexPathTBV = indexPath
         self.selectingCellTBV = cell
@@ -133,6 +134,7 @@ class MakeTableViewController: UIViewController {
             let cell = tableView.cellForRow(at: currentIndexPath) as? LearnTableViewCell
             else {
                 snapShotView.removeFromSuperview()
+                self.selectingCellTBV?.cancelSwap()
                 return
             }
         
@@ -145,6 +147,8 @@ class MakeTableViewController: UIViewController {
         }) { (_) in
             if currentIndexPath != selectingIndexPath {
                 self.selectingCellTBV?.swapAnswer(cell: cell)
+            } else {
+                self.selectingCellTBV?.cancelSwap()
             }
             
             UIView.animate(withDuration: 0.2, animations: {
@@ -290,7 +294,8 @@ class MakeTableViewController: UIViewController {
         
         let tbcells = tableView.visibleCells as! [LearnTableViewCell]
         for cell in tbcells {
-            cell.viewCalculation.backgroundColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
+            cell.setupView()
+            cell.isAnswered = false
         }
         tableView.isUserInteractionEnabled = true
         tableView.reloadData()
@@ -298,7 +303,6 @@ class MakeTableViewController: UIViewController {
         let cvcells = collectionView.visibleCells as! [ResultCollectionViewCell]
         for cell in cvcells {
             if cell.isHidden {
-                
                 cell.isHidden = false
             }
         }
