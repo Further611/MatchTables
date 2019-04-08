@@ -19,13 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = HomeViewController()
         self.window?.makeKeyAndVisible()
-        let scoreSheet = UserDefaults.standard
-        let initDict: [String : Int] = [:]
-        let defaultValues = [Constant.KeyUserDefaults.goldCount : 0,
-                             Constant.KeyUserDefaults.silverCount : 0,
-                             Constant.KeyUserDefaults.bronzeCount : 0,
-                             Constant.KeyUserDefaults.highScore : initDict] as [String : Any]
-        scoreSheet.register(defaults: defaultValues)
         return true
     }
 

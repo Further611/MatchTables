@@ -97,17 +97,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		410166CB224250B300FB8712 /* Score */ = {
-			isa = PBXGroup;
-			children = (
-				410166CC224250CE00FB8712 /* ScoreViewController.swift */,
-				410166CD224250CE00FB8712 /* ScoreViewController.xib */,
-				41FC2B1C224379FC002C135B /* ScoreTableViewCell.swift */,
-				41FC2B1D224379FC002C135B /* ScoreTableViewCell.xib */,
-			);
-			path = Score;
-			sourceTree = "<group>";
-		};
 		4102B687222FBEEB00AA8F95 /* Hepper */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +113,45 @@
 				411957EC2226F2D80060E04A /* incorrect.mp3 */,
 			);
 			path = Sound;
+			sourceTree = "<group>";
+		};
+		412981F622544BED0050B87F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				410166CD224250CE00FB8712 /* ScoreViewController.xib */,
+				41D41A5E2224E48300029C4D /* PlayViewController.xib */,
+				41BCE7A3221FF6670049AF1C /* MakeTableViewController.xib */,
+				41BCE78C221FB3F60049AF1C /* LearnViewController.xib */,
+				41BCE79A221FE9FE0049AF1C /* SelectNumberViewController.xib */,
+				41BCE787221FAC610049AF1C /* HomeViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		412981F722544C1C0050B87F /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				41BCE78F221FB8570049AF1C /* LearnTableViewCell.swift */,
+				41BCE790221FB8570049AF1C /* LearnTableViewCell.xib */,
+				41D41A38222392F600029C4D /* ResultCollectionViewCell.swift */,
+				41D41A39222392F600029C4D /* ResultCollectionViewCell.xib */,
+				41FC2B1C224379FC002C135B /* ScoreTableViewCell.swift */,
+				41FC2B1D224379FC002C135B /* ScoreTableViewCell.xib */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		412981F822544C380050B87F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				41BCE786221FAC610049AF1C /* HomeViewController.swift */,
+				41BCE799221FE9FE0049AF1C /* SelectNumberViewController.swift */,
+				41BCE78B221FB3F60049AF1C /* LearnViewController.swift */,
+				41BCE7A2221FF6670049AF1C /* MakeTableViewController.swift */,
+				41D41A5D2224E48300029C4D /* PlayViewController.swift */,
+				410166CC224250CE00FB8712 /* ScoreViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		41A8B711223B9D7900393D26 /* font */ = {
@@ -157,12 +185,10 @@
 		41BCE772221FAC300049AF1C /* Math_Tables */ = {
 			isa = PBXGroup;
 			children = (
-				410166CB224250B300FB8712 /* Score */,
+				412981F822544C380050B87F /* ViewControllers */,
+				412981F622544BED0050B87F /* Views */,
+				412981F722544C1C0050B87F /* Subviews */,
 				4102B687222FBEEB00AA8F95 /* Hepper */,
-				41D41A5C2224E46500029C4D /* Play */,
-				41BCE7A1221FF6320049AF1C /* Make Table */,
-				41BCE78A221FB3D70049AF1C /* LearnTables */,
-				41BCE785221FAC4C0049AF1C /* Home */,
 				41A8B711223B9D7900393D26 /* font */,
 				411957EB2226F2C30060E04A /* Sound */,
 				41BCE773221FAC300049AF1C /* AppDelegate.swift */,
@@ -172,48 +198,6 @@
 				41BCE77F221FAC310049AF1C /* Info.plist */,
 			);
 			path = Math_Tables;
-			sourceTree = "<group>";
-		};
-		41BCE785221FAC4C0049AF1C /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				41BCE786221FAC610049AF1C /* HomeViewController.swift */,
-				41BCE787221FAC610049AF1C /* HomeViewController.xib */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		41BCE78A221FB3D70049AF1C /* LearnTables */ = {
-			isa = PBXGroup;
-			children = (
-				41BCE78B221FB3F60049AF1C /* LearnViewController.swift */,
-				41BCE78C221FB3F60049AF1C /* LearnViewController.xib */,
-				41BCE78F221FB8570049AF1C /* LearnTableViewCell.swift */,
-				41BCE790221FB8570049AF1C /* LearnTableViewCell.xib */,
-				41BCE799221FE9FE0049AF1C /* SelectNumberViewController.swift */,
-				41BCE79A221FE9FE0049AF1C /* SelectNumberViewController.xib */,
-			);
-			path = LearnTables;
-			sourceTree = "<group>";
-		};
-		41BCE7A1221FF6320049AF1C /* Make Table */ = {
-			isa = PBXGroup;
-			children = (
-				41BCE7A2221FF6670049AF1C /* MakeTableViewController.swift */,
-				41BCE7A3221FF6670049AF1C /* MakeTableViewController.xib */,
-				41D41A38222392F600029C4D /* ResultCollectionViewCell.swift */,
-				41D41A39222392F600029C4D /* ResultCollectionViewCell.xib */,
-			);
-			path = "Make Table";
-			sourceTree = "<group>";
-		};
-		41D41A5C2224E46500029C4D /* Play */ = {
-			isa = PBXGroup;
-			children = (
-				41D41A5D2224E48300029C4D /* PlayViewController.swift */,
-				41D41A5E2224E48300029C4D /* PlayViewController.xib */,
-			);
-			path = Play;
 			sourceTree = "<group>";
 		};
 		E36C226A39A3FCDF2E886C7E /* Frameworks */ = {
