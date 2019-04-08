@@ -25,7 +25,6 @@ class LearnViewController: UIViewController, UITableViewDataSource, UITableViewD
     let synthesizer = AVSpeechSynthesizer()
     var speakIndex = 0
     var isSpeakAll = false
-    var backToHomeCallback: (() -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,9 +41,9 @@ class LearnViewController: UIViewController, UITableViewDataSource, UITableViewD
         btnSpeak.layer.borderColor = #colorLiteral(red: 0.1298420429, green: 0.1298461258, blue: 0.1298439503, alpha: 1)
         btnSpeak.layer.cornerRadius = btnSpeak.frame.height / 2
         
-        btnNext.layer.cornerRadius = 15
-        btnPrevious.layer.cornerRadius = 15
-        buttonView.layer.cornerRadius = 15
+        btnNext.layer.cornerRadius = 10
+        btnPrevious.layer.cornerRadius = 10
+        buttonView.layer.cornerRadius = 10
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -107,12 +106,7 @@ class LearnViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     @IBAction func btnClose(_ sender: Any) {
         stopSpeaking()
-
-        dismiss(animated: true, completion: {
-            if let callbaclk = self.backToHomeCallback {
-                callbaclk()
-            }
-        })
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func btnSpeak(_ sender: Any) {

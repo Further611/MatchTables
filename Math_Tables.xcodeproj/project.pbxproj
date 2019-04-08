@@ -118,12 +118,12 @@
 		412981F622544BED0050B87F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				410166CD224250CE00FB8712 /* ScoreViewController.xib */,
-				41D41A5E2224E48300029C4D /* PlayViewController.xib */,
-				41BCE7A3221FF6670049AF1C /* MakeTableViewController.xib */,
-				41BCE78C221FB3F60049AF1C /* LearnViewController.xib */,
-				41BCE79A221FE9FE0049AF1C /* SelectNumberViewController.xib */,
 				41BCE787221FAC610049AF1C /* HomeViewController.xib */,
+				41BCE79A221FE9FE0049AF1C /* SelectNumberViewController.xib */,
+				41BCE78C221FB3F60049AF1C /* LearnViewController.xib */,
+				41BCE7A3221FF6670049AF1C /* MakeTableViewController.xib */,
+				41D41A5E2224E48300029C4D /* PlayViewController.xib */,
+				410166CD224250CE00FB8712 /* ScoreViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";

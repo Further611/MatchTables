@@ -161,7 +161,7 @@ class PlayViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         rs = number * multi
         
-        resultList = [rs, rs + 1, rs + 2, rs + number, rs + multi, rs - number ]
+        resultList = [rs, rs + 1, rs + 2, rs + 3, rs + 4, rs + 5 ]
         
         resultList.shuffle()
         
@@ -307,8 +307,6 @@ class PlayViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         let saveScoreData = [playedDate : score]
         array.append(saveScoreData)
-        
-        
         
         scoreSheet.set(array, forKey: kUserDefaultKey.scoreData)
     }

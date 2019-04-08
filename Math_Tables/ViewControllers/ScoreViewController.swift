@@ -66,9 +66,10 @@ class ScoreViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 
                 dateStringList.append(playedDate)
                 scoreList.append(score)
-    
             }
         }
+        
+        print(scoreDict)
     }
 
     @IBAction func btnHome(_ sender: Any) {
@@ -76,7 +77,11 @@ class ScoreViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dateStringList.count
+        if dateStringList.count >= 5 {
+            return 5
+        } else {
+            return dateStringList.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
